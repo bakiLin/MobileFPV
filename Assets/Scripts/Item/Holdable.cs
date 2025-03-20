@@ -1,6 +1,7 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Rendering;
 
+// Скрипт определяющий возможность объекта быть поднятым игроком
 public class Holdable : MonoBehaviour
 {
     private ItemPhysics itemPhysics;

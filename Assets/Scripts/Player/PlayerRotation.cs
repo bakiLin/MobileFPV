@@ -1,4 +1,4 @@
-using UnityEngine;
+п»їusing UnityEngine;
 
 public class PlayerRotation : MonoBehaviour
 {
@@ -17,9 +17,9 @@ public class PlayerRotation : MonoBehaviour
     public void Rotate(Vector3 rotationX, Vector3 rotationY)
     {
         rotation = transform.rotation.eulerAngles + speed * Time.deltaTime * rotationX;
-        transform.rotation = Quaternion.Euler(rotation); // Поворот игрока
+        transform.rotation = Quaternion.Euler(rotation); // РџРѕРІРѕСЂРѕС‚ РёРіСЂРѕРєР°
 
         rotation = target.rotation.eulerAngles + speed * Time.deltaTime * rotationY;
-        target.rotation = Quaternion.Euler(rotation); // Поворот дочернего объекта с прикрепленной камерой
+        target.rotation = Quaternion.Euler(rotation); // РџРѕРІРѕСЂРѕС‚ РґРѕС‡РµСЂРЅРµРіРѕ РѕР±СЉРµРєС‚Р° СЃ РїСЂРёРєСЂРµРїР»РµРЅРЅРѕР№ РєР°РјРµСЂРѕР№
     }
 }

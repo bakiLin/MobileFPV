@@ -1,4 +1,4 @@
-using UnityEngine;
+п»їusing UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void Move(Vector3 position)
     {
-        // Вычисляем положение для перемещения с учетом поворота игрока
+        // Р’С‹С‡РёСЃР»СЏРµРј РїРѕР»РѕР¶РµРЅРёРµ РґР»СЏ РїРµСЂРµРјРµС‰РµРЅРёСЏ СЃ СѓС‡РµС‚РѕРј РїРѕРІРѕСЂРѕС‚Р° РёРіСЂРѕРєР°
         Vector3 direction = position.x * transform.right + position.z * transform.forward;
         direction.Normalize();
         rb.MovePosition(rb.position + speed * Time.fixedDeltaTime * direction);

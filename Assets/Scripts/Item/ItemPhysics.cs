@@ -1,5 +1,6 @@
-using UnityEngine;
+﻿using UnityEngine;
 
+// Взаимодействие с физикой объекта
 public class ItemPhysics : MonoBehaviour
 {
     private Rigidbody rb;

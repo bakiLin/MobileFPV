@@ -1,9 +1,9 @@
-using UniRx;
+п»їusing UniRx;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Zenject;
 
-// Скрипт отвечающий за тактильный ввод
+// РЎРєСЂРёРїС‚ РѕС‚РІРµС‡Р°СЋС‰РёР№ Р·Р° С‚Р°РєС‚РёР»СЊРЅС‹Р№ РІРІРѕРґ
 public class TouchInput : MonoBehaviour
 {
     [Inject]
@@ -42,10 +42,10 @@ public class TouchInput : MonoBehaviour
     {
         Observable.EveryUpdate().Subscribe(_ => 
         {
-            // Проверка состояния джойстика чтобы не поворачивать игрока при перемещении триггера
+            // РџСЂРѕРІРµСЂРєР° СЃРѕСЃС‚РѕСЏРЅРёСЏ РґР¶РѕР№СЃС‚РёРєР° С‡С‚РѕР±С‹ РЅРµ РїРѕРІРѕСЂР°С‡РёРІР°С‚СЊ РёРіСЂРѕРєР° РїСЂРё РїРµСЂРµРјРµС‰РµРЅРёРё С‚СЂРёРіРіРµСЂР°
             if (!joystickInput.IsJoystickTriggered()) 
             {
-                Vector2 delta = deltaAction.ReadValue<Vector2>(); // Разница между текущим и предыдущим положениями
+                Vector2 delta = deltaAction.ReadValue<Vector2>(); // Р Р°Р·РЅРёС†Р° РјРµР¶РґСѓ С‚РµРєСѓС‰РёРј Рё РїСЂРµРґС‹РґСѓС‰РёРј РїРѕР»РѕР¶РµРЅРёСЏРјРё
                 playerRotation.Rotate(new Vector3(0f, -delta.x), new Vector3(delta.y, 0f)); 
             }
             else
@@ -68,7 +68,7 @@ public class TouchInput : MonoBehaviour
     private void Tap(InputAction.CallbackContext context)
     {
         Vector3 position = positionAction.ReadValue<Vector2>();
-        Ray ray = Camera.main.ScreenPointToRay(position); // Посылаем луч в точку нажатия
+        Ray ray = Camera.main.ScreenPointToRay(position); // РџРѕСЃС‹Р»Р°РµРј Р»СѓС‡ РІ С‚РѕС‡РєСѓ РЅР°Р¶Р°С‚РёСЏ
         playerInteraction.Grab(ray);
     }
 }

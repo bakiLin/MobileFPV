@@ -1,8 +1,8 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using Zenject;
 using UniRx;
 
-// Ñêðèïò äëÿ ñ÷èòûâàíèÿ ïîëîæåíèÿ äæîéñòèêà
+// Ð¡ÐºÑ€Ð¸Ð¿Ñ‚ Ð´Ð»Ñ ÑÑ‡Ð¸Ñ‚Ñ‹Ð²Ð°Ð½Ð¸Ñ Ð¿Ð¾Ð»Ð¾Ð¶ÐµÐ½Ð¸Ñ Ð´Ð¶Ð¾Ð¹ÑÑ‚Ð¸ÐºÐ°
 public class JoystickInput : MonoBehaviour
 {
     [Inject]
@@ -13,7 +13,7 @@ public class JoystickInput : MonoBehaviour
 
     public void Move(CompositeDisposable disposable)
     {
-        // Ïîäïèñûâàåìñÿ íà FixedUpdate äëÿ ïåðåìåùåíèÿ èãðîêà ñ ôèçèêîé
+        // ÐŸÐ¾Ð´Ð¿Ð¸ÑÑ‹Ð²Ð°ÐµÐ¼ÑÑ Ð½Ð° FixedUpdate Ð´Ð»Ñ Ð¿ÐµÑ€ÐµÐ¼ÐµÑ‰ÐµÐ½Ð¸Ñ Ð¸Ð³Ñ€Ð¾ÐºÐ° Ñ Ñ„Ð¸Ð·Ð¸ÐºÐ¾Ð¹
         Observable.EveryFixedUpdate().Subscribe(_ =>
         {
             playerMovement.Move(new Vector3(joystick.Horizontal, 0f, joystick.Vertical));

@@ -1,4 +1,4 @@
-using UnityEngine;
+п»їusing UnityEngine;
 using Zenject;
 
 public class PlayerInteraction : MonoBehaviour
@@ -27,7 +27,7 @@ public class PlayerInteraction : MonoBehaviour
         {
             if (hit.collider.GetComponent<Holdable>())
             {
-                // Проверяем расстояние до объекта и наличие другого объекта "в руке"
+                // РџСЂРѕРІРµСЂСЏРµРј СЂР°СЃСЃС‚РѕСЏРЅРёРµ РґРѕ РѕР±СЉРµРєС‚Р° Рё РЅР°Р»РёС‡РёРµ РґСЂСѓРіРѕРіРѕ РѕР±СЉРµРєС‚Р° "РІ СЂСѓРєРµ"
                 if (hit.distance < 3f && item == null) 
                 {
                     item = hit.collider.GetComponent<Holdable>();
@@ -42,7 +42,7 @@ public class PlayerInteraction : MonoBehaviour
     {
         if (item != null)
         {
-            item.Drop(target.forward * dropForce); // Бросаем объект с руки в направлении камеры
+            item.Drop(target.forward * dropForce); // Р‘СЂРѕСЃР°РµРј РѕР±СЉРµРєС‚ СЃ СЂСѓРєРё РІ РЅР°РїСЂР°РІР»РµРЅРёРё РєР°РјРµСЂС‹
             item = null;
         }
     }

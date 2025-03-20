@@ -17,3 +17,5 @@ https://github.com/user-attachments/assets/0b785b85-503e-4571-9beb-13a4e838c390
 - Cinemachine
 - Input System
 - [Joystick Pack](https://assetstore.unity.com/packages/tools/input-management/joystick-pack-107631)
+## Ссылки
+[APK](https://disk.yandex.ru/d/A7WHEXx-U_KcQg)
